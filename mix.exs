@@ -40,6 +40,8 @@ defmodule MediumGraphqlApi.MixProject do
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
+      {:comeonin, "~> 4.1"},
+      {:argon2_elixir, "~> 1.3"},
       {:plug_cowboy, "~> 2.0"}
     ]
   end

@@ -9,6 +9,8 @@ config :medium_graphql_api, MediumGraphqlApiWeb.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
+config :argon2_elixir, t_cost: 2, m_cost: 8
+
 # Configure your database
 config :medium_graphql_api, MediumGraphqlApi.Repo,
   username: "1234",
