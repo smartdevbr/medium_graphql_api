@@ -1,16 +1,15 @@
 defmodule MediumGraphqlApiWeb.Schema do
-    use Absinthe.Schema
+  use Absinthe.Schema
 
-    # import types
+  # import types
+  import_types(MediumGraphqlApiWeb.Schema.Types)
 
-    query do
-    
-    end
+  query do
+  end
 
-    # mutation do
-    # end
+  # mutation do
+  # end
 
-    # subscription do
-    # end
-
+  # subscription do
+  # end
 end
