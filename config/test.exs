@@ -9,7 +9,6 @@ config :medium_graphql_api, MediumGraphqlApiWeb.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
-
 # Configure your database
 config :medium_graphql_api, MediumGraphqlApi.Repo,
   username: "1234",
