@@ -34,6 +34,13 @@ defmodule MediumGraphqlApiWeb.Schema do
       middleware(MiddleWare.Authorize, :any )
       resolve(&Resolver.PostResolver.create_post/3)
     end
+
+    @desc "Create a Comment" 
+    field :create_comment, type: :comment_type do
+      arg(:input, non_null(:comment_input_type))
+      middleware(MiddleWare.Authorize, :any )
+      resolve(&Resolver.CommentResolver.create_comment/3)
+    end
   end
 
   # subscription do
