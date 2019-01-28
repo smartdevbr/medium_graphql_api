@@ -17,6 +17,13 @@ config :medium_graphql_api, MediumGraphqlApiWeb.Endpoint,
   render_errors: [view: MediumGraphqlApiWeb.ErrorView, accepts: ~w(json)],
   pubsub: [name: MediumGraphqlApi.PubSub, adapter: Phoenix.PubSub.PG2]
 
+
+  #Guardian config details
+  #"Secret key. You can use `mix guardian.gen.secret` to get one"
+config :medium_graphql_api, MediumGraphqlApi.Guardian,
+  issuer: "medium_graphql_api",
+  secret_key: "VomHkKI4JpfEaoZM2QigLgjVlj1GdIC/ONc/z8iVKYuR+afgolc+2bAOMNWh6H9e"
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
