@@ -14,13 +14,9 @@ defmodule MediumGraphqlApi.Accounts.Session do
   defp check_password(user, args) do
     case user do
       nil -> 
-        IO.inspect "oooooooi"
         Comeonin.Argon2.dummy_checkpw()
       _ -> 
-        IO.inspect args.password
-        IO.puts "=========="
-        IO.inspect user
-        Comeonin.Argon2.checkpw(args.password, user.password)
+        Comeonin.Argon2.checkpw(args.password, user.password_hash)
     end
   end
 end
