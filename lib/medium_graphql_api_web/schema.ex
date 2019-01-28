@@ -10,7 +10,7 @@ defmodule MediumGraphqlApiWeb.Schema do
 
     field :users, list_of(:user_type) do
       # resolver
-      middleware(MiddleWare.Authorize, "admin" )
+      middleware(MiddleWare.Authorize, :any )
       resolve(&Resolver.UserResolver.users/3)
     end
   end
